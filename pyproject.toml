@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "node-energy-pre-commit-hooks"
+version = "0.1.0"
+description = ""
+authors = ["Lars Rinn <lars.rinn@node.energy>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b0"
+
+[tool.poetry.scripts]
+liccheck-pipenv = "node_energy_pre_commit_hooks.liccheck_pipenv:main"
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
