@@ -7,6 +7,8 @@ from node_energy_pre_commit_hooks.utils import added_files, cmd_output, temporar
 def run_liccheck_against_pipfile_lock(filenames: Sequence[str], strategy_file: str) -> int:
     # Find all added files that are also in the list of files pre-commit tells
     # us about
+    print("input", filenames)
+    print("added", added_files())
     if "Pipfile.lock" not in (added_files() & set(filenames)):
         return 0
 
