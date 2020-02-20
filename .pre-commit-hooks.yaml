@@ -1,0 +1,6 @@
+-   id: liccheck-pipenv
+    name: Run liccheck for projects using pipenv
+    description: Creates a temporary requirements.txt and uses this to run liccheck.
+    entry: liccheck-pipenv
+    files: Pipfile.lock
+    language: python
