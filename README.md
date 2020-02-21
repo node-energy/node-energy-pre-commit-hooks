@@ -29,6 +29,8 @@ and uses this to run [liccheck](https://pypi.org/project/liccheck/).
 
   - You can pass the path to your liccheck `strategy.ini` as argument: `args: [--strategy, path/to/strategy.ini]`.
     The default is `strategy.ini`
+  - This hook may fail if your environment is not in sync with `Pipfile.lock`.
+    In this case, do a `pipenv sync --dev`.
 
 
 ### Adding new hooks
