@@ -4,7 +4,9 @@ from typing import Optional, Sequence
 from node_energy_pre_commit_hooks.utils import cmd_output, temporary_path
 
 
-def run_liccheck_against_pipfile_lock(filenames: Sequence[str], strategy_file: str) -> int:
+def run_liccheck_against_pipfile_lock(
+    filenames: Sequence[str], strategy_file: str
+) -> int:
     if "Pipfile.lock" not in set(filenames):
         return 0
 
