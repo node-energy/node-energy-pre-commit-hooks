@@ -1,13 +1,11 @@
 import argparse
 from typing import Optional, Sequence
 
-from node_energy_pre_commit_hooks.utils import added_files, cmd_output, temporary_path
+from node_energy_pre_commit_hooks.utils import cmd_output, temporary_path
 
 
 def run_liccheck_against_pipfile_lock(filenames: Sequence[str], strategy_file: str) -> int:
-    # Find all added files that are also in the list of files pre-commit tells
-    # us about
-    if "Pipfile.lock" not in (added_files() & set(filenames)):
+    if "Pipfile.lock" not in set(filenames):
         return 0
 
     with temporary_path() as requirements_path:
