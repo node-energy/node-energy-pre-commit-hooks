@@ -29,3 +29,12 @@ and uses this to run [liccheck](https://pypi.org/project/liccheck/).
 
   - You can pass the path to your liccheck `strategy.ini` as argument: `args: [--strategy, path/to/strategy.ini]`.
     The default is `strategy.ini`
+
+
+### Adding new hooks
+
+To add a new hook:
+1. Create a script in the package folder
+1. Add an entry point for that script to the `[tool.poetry.scripts]` section of `pyproject.toml`
+1. Add the configuration to `.pre-commit-hooks.yaml` ([documentation](https://pre-commit.com/#new-hooks))
+1. Add a new tag to this repo and push it to Github.
