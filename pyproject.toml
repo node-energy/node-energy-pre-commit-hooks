@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "node-energy-pre-commit-hooks"
-version = "0.2.0"
+version = "0.2.1"
 description = ""
 authors = ["Lars Rinn <lars.rinn@node.energy>"]
 license = "MIT"

@@ -1,7 +1,11 @@
 import argparse
 from typing import Optional, Sequence
 
-from node_energy_pre_commit_hooks.utils import cmd_output, temporary_path
+from node_energy_pre_commit_hooks.utils import (
+    CalledProcessError,
+    cmd_output,
+    temporary_path,
+)
 
 
 def run_liccheck_against_pipfile_lock(
@@ -12,7 +16,13 @@ def run_liccheck_against_pipfile_lock(
 
     with temporary_path() as requirements_path:
         requirements_path.write_text(cmd_output("pipenv", "lock", "--requirements"))
-        cmd_output("liccheck", "-s", strategy_file, "-r", requirements_path)
+        args = ("liccheck", "-s", strategy_file, "-r", requirements_path)
+        try:
+            cmd_output(*args)
+        except CalledProcessError:
+            raise CalledProcessError(
+                f"liccheck pre-commit hook failed. Re-run for more details: {' '.join(args)}"
+            )
     return 0
 
 
