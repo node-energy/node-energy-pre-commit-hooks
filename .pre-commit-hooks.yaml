@@ -4,3 +4,10 @@
     entry: liccheck-pipenv
     files: Pipfile.lock
     language: python
+
+-   id: import-linter
+    name: Run import linter
+    description: Checks if python imports are valid.
+    entry: import-linter
+    types: [file, python]
+    language: python
