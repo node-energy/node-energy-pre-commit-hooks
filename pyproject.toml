@@ -7,6 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+import-linter = "^1.0"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
@@ -17,6 +18,7 @@ mypy = "^0.761"
 
 [tool.poetry.scripts]
 liccheck-pipenv = "node_energy_pre_commit_hooks.liccheck_pipenv:main"
+import-linter = "node_energy_pre_commit_hooks.import_linter:main"
 
 
 [build-system]
