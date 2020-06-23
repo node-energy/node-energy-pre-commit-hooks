@@ -20,7 +20,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
         "filenames", nargs="*", help="Filenames pre-commit believes are changed.",
     )
     parser.add_argument(
-        "--config_file", type=str, default=".importlinter", help="Path to import linter config file",
+        "--config-file", type=str, default=".importlinter", help="Path to import linter config file",
     )
 
     args = parser.parse_args(argv)
