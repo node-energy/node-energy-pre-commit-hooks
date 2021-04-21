@@ -21,7 +21,7 @@ def run_liccheck_against_pipfile_lock(
             cmd_output(*args)
         except CalledProcessError:
             print("To reproduce the check, run the following commands:")
-            print("pipenv lock --requirements requirements.txt")
+            print("pipenv lock --requirements > requirements.txt")
             print("liccheck -s .liccheck/strategy.ini -r requirements.txt")
             raise CalledProcessError(
                 f"liccheck pre-commit hook failed. Re-run for more details: {' '.join(args)}"
