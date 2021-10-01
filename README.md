@@ -13,7 +13,7 @@ You can find more information on pre-commit here: https://pre-commit.com/
 Add this to your `.pre-commit-config.yaml`
 
     -   repo: https://github.com/node-energy/node-energy-pre-commit-hooks
-        rev: 0.2.0  # Use the ref (branch or tag of this repo) you want to point at
+        rev: v0.3.0  # or `pre-commit autoupdate` will handle latest version
         hooks:
         -   id: liccheck-pipenv
             args: ...
