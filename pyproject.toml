@@ -7,7 +7,7 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-import-linter = ">= 1.0, <= 1.3"
+import-linter = {version=">= 1.0, <= 1.3", extras=["toml"]}
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
@@ -15,6 +15,9 @@ flake8 = "^3.7.9"
 isort = "^4.3.21"
 pre-commit = "^2.1.0"
 mypy = "^0.761"
+
+[tool.poetry.extras]
+import-linter = ["toml"]
 
 [tool.poetry.scripts]
 liccheck-pipenv = "node_energy_pre_commit_hooks.liccheck_pipenv:main"
