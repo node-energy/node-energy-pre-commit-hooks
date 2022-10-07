@@ -13,7 +13,7 @@ You can find more information on pre-commit here: https://pre-commit.com/
 Add this to your `.pre-commit-config.yaml`
 
     -   repo: https://github.com/node-energy/node-energy-pre-commit-hooks
-        rev: 0.2.0  # Use the ref (branch or tag of this repo) you want to point at
+        rev: 0.3.1  # Use the ref (branch name or tag) of this repo to point to
         hooks:
         -   id: liccheck-pipenv
             args: ...
@@ -40,3 +40,7 @@ To add a new hook:
 1. Add an entry point for that script to the `[tool.poetry.scripts]` section of `pyproject.toml`
 1. Add the configuration to `.pre-commit-hooks.yaml` ([documentation](https://pre-commit.com/#new-hooks))
 1. Add a new tag to this repo and push it to Github.
+
+### Create release
+
+Push a new tag: `git tag v0.x.y && git push origin --tags`
