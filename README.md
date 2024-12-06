@@ -1,3 +1,6 @@
+> **_NOTE:_** This repository is no longer maintained
+
+
 node-energy-pre-commit-hooks
 ============================
 
